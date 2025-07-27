@@ -9,11 +9,6 @@
 
 APlayerCharacter::APlayerCharacter()
 {
-	AAuraPlayerState* PlayerState = Cast<AAuraPlayerState>(GetPlayerState());
-	
-
-	AbilitySystemComponent->InitAbilityActorInfo(PlayerState, this );
-	
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0.f, 400.f, 0.f);
 	GetCharacterMovement()->bConstrainToPlane = true;
