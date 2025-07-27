@@ -13,6 +13,16 @@ ACharacterBase::ACharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* ACharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UAttributeSet* ACharacterBase::GetAbilitySystemAttribute() const
+{
+	return AttributeSet;
+}
+
 void ACharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
